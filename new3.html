@@ -1,0 +1,55 @@
+<html>
+
+<head>
+     <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>-->
+    <title>Hello World</title>
+</head>
+<body>
+    <input type="file" accept="image/*;capture=camera">
+    <canvas id="drawing" onmousedown="abc(event)" onmousemove="cde(event)"  width="400" height="200" style="border:1px solid #000000;" ></canvas>
+</body>
+<script>
+var c;    
+function abc(){   
+    
+/*ctx.arc(100, 75, 1, 0, 2 * Math.PI);
+ctx.strokeStyle="#000000";    
+ctx.stroke();*/
+    }
+var tempX=0;
+var tempY=0;    
+    
+/*var tempX=evt.pageX;
+var tempY=evt.pageY;    */
+
+
+function cde(evt){
+tempX=evt.pageX;
+ tempY=evt.pageY;
+var c = document.getElementById('drawing'); 
+        //var rect = c.getBoundingClientRect();   
+        console.log(tempX,tempY);    
+        var ctx = c.getContext('2d');
+        ctx.beginPath();
+        ctx.arc(tempX, tempY, 1, 0, 2 * Math.PI);
+        ctx.strokeStyle="#000000";    
+        ctx.stroke();    
+
+}
+function abc(evt){
+        
+
+}
+    //ctx.fill("#000000");
+ 
+    
+/*function abc(){    
+    var i = document.getElementById("drawing").coords;  
+    console.log(i);    
+        //lineTo(i);
+        //stroke("#FFFFF");
+}*/
+</script>    
+</html>
+    
+    
