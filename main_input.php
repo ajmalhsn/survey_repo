@@ -33,7 +33,7 @@ body, html {height: 100%}
 </html>
 <?php
 //echo "everything worked successfully"
-sleep(5);
-header("Location:IRT.php");
-exit(0);
+//sleep(5);
+//header("Location:IRT.php");
+//exit(0);
 ?>

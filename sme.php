@@ -35,10 +35,10 @@
                 <?php include 'table_randomize.php' ?>
             </div>
             </div>
-
+<form class="needs-validation" id="form_screen" action="main_input.php" method="POST" novalidate>
             <div class="row">
                 <div class="form-group">
-                    <form class="needs-validation" id="form_screen" action="main_input.php" method="GET" novalidate>
+    
                     <p>Q2. Is your company part of a bigger group of companies or is this an individual business entity? SINGLE ANSWER POSSIBLE</p>
                         <div class="form-check">
                             <br>
@@ -57,7 +57,6 @@
         </div>
         <div class="row">
             <div class="form-group">
-                <form class="needs-validation" id="form_screen" action="input_process.php" method="GET" novalidate>
                       <p>Q3. How many branches does your company have? SINGLE ANSWER POSSIBLE</p>
                             <div class="form-check">
                                 <br>
@@ -90,7 +89,6 @@
         </div>
         <div class="row">
             <div class="form-group">
-                <form class="needs-validation" id="form_screen" action="input_process.php" method="GET" novalidate>
                      <p>Q6. How do you usually promote the business/your products & services? MTULIPLE ANSWERS POSSIBLE     </p>
                                 <div class="form-check">
 
@@ -372,9 +370,101 @@
         echo '</div></div>';
     }
     ?>
+    <div class="row">
+            <p>Q21. You mentioned that you are currently using _________(Mention company in Q19) as health insurance provider. Can you please tell us:</p>
+            <p class="rtl">Q21- لقد ذكرت أنكم حاليا تتعاملون مع ________ (اذكر اسم الشاركة من Q19) كمزود للتأمين الصحي. هل يمكن أن تقول لنا: 
+</p>
+        <table class="table table-striped" border="3">
+            <thead class=" table-hover thead-dark">
+                <tr>
+                    <th scope="col">Sno.</th>
+                    <th scope="col">Type of Employees benefitted</th>
+                    <th scope="col">No of Employes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr scope="row">
+                    <td>1</td>
+                    <td>How many Blue Collar – Primary Lives Covered &nbsp;   <b class="rtl">كم عدد موظفي المكاتب – الأشخاص المؤمن عليهم</b></td>
+                    <td><input type="text" name="Q21_1"> </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>How many White Collar – Primary Lives Covered &nbsp; <b class="rtl">كم عدد العمال – الأشخاص المؤمن عليهم</b></td>
+                    <td><input type="text" name="Q21_2"> </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>How many White Collar – Dependent Lives Covered&nbsp;<b class="rtl">كم عدد العمال  – المرافقين المؤمن عليهم </b></td>
+                    <td><input type="text" name="Q21_3"> </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>How many Saudis – Primary Lives Covered &nbsp; <b class="rtl">كم عدد السعوديين - الأشخاص المؤمن عليهم</b></td>
+                    <td><input type="text" name="Q21_4"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>How many Saudis – Dependents Lives Covered &nbsp;<b class="rtl">كم عدد السعوديين – الأشخاص التابعين المؤمن عليهم</b></td>
+                    <td><input type="text" name="Q21_5"> </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>How many Arabs – Primary Lives Covered &nbsp;<b class="rtl">كم عدد العرب – الأشخاص المؤمن عليهم</b></td>
+                    <td><input type="text" name="Q21_6"> </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>How many Arabs – Dependents Lives Covered &nbsp;<b class="rtl">كم عدد العرب – المرافقين المؤمن عليهم</b></td>
+                    <td><input type="text" name="Q21_7"> </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>How many Asians – Primary Lives Covered &nbsp;<b class="rtl">كم عدد الآسيويين – الأشخاص المؤمن عليهم</b></td>
+                    <td><input type="text" name="Q21_8"> </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>How many Asians – Dependents Lives Covered &nbsp;<b class="rtl">كم عدد الآسيويين – المرافقين المؤمن عليهم</b></td>
+                    <td><input type="text" name="Q21_9"> </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>How many Male – Primary Lives Covered &nbsp;<b class="rtl">كم عدد الذكور – الأشخاص المؤمن عليهم</b></td>
+                    <td><input type="text" name="Q21_10"> </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>How many Female – Primary Lives Covered &nbsp;<b class="rtl">كم عدد الإناث  – الأشخاص المؤمن عليهم</b></td>
+                    <td><input type="text" name="Q21_11"> </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Total lives&nbsp;<b class="rtl">مجموع الأشخاص</b></td>
+                    <td><input type="text" name="Q21_12"> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>Q22. What is the total annual premium paid for the Private Medical/Health insurance for employees/dependents this year….? SINGLE ANSWER POSSIBLE</p>
+    <p class="rtl"><b>
+Q22- ما هو اجمالي القسط السنوي المدفوع للتأمين الطبي/الصحي الخاص للموظفين/المرافقين والتابعين هذه السنة....؟ يسمح باجابة واحدة
+</b></p>
+        <label>Annual premium in SAR
+            <input type="text" name="Q22">
+            <span class="rtl"><b>جمالي القسط السنوي بالريال السعوديإ</b></span>
+        </label>    
     <br>
     <br>
+    <p>Q25. What are the current payment terms with your Private Medical/Health Insurer? SHOW CARD. SINGL ANSWER POSSIBLE</p><p class="rtl">
+Q25-  ما هي شروط الدفع الحالية مع مزود التأمين الطبي/الصحي لشركتكم؟ اعرض البطاقة. يسمح باجابة واحدة فقط</p>        
+    <div class="custom-control custom-radio ">
+    <input type="checkbox" id="Q25_1" name="Q25" value="1" class="custom-control-input" required >
+    <label class="custom-control-label" for="Q25_1">Due to government regulations</label>
+    </div>        
     <input type="submit" class="btn btn-primary"/>
-        </form>
-
+            
+            </form>        
+        </div>
     </body>
+</html>
