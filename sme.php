@@ -600,7 +600,7 @@ $j=0;
     //for($j=0;$j<mysqli_num_rows($result);$j++){
     if($result->num_rows>0){
                         while($row=$result->fetch_assoc()){
-                        $content.='<tr scope="row"><td>'.$row["id"].'</td><td>'.$row["attribute_e"].'</td><td><input class="check" type="checkbox" value="'.$row["id"].'" name="Q26"> </td><td><input value="1" type="radio" name="Q27_'.$row["id"].'"> </td><td><input value="2" type="radio" name="Q27_'.$row["id"].'"> </td> <td>'.$row["attribute_a"].'</td></tr>';
+                        $content.='<tr scope="row"><td>'.$row["id"].'</td><td>'.$row["attribute_e"].'</td><td><input class="check" type="checkbox" value="'.$row["id"].'" name="Q26"> </td><td><input value="1" type="radio" id="Q27_1_'.$row["id"].'" name="Q27_'.$row["id"].'"> </td><td><input value="2" id="Q27_2_'.$row["id"].'" type="radio" name="Q27_'.$row["id"].'"> </td> <td>'.$row["attribute_a"].'</td></tr>';
                             
                         }
     }
@@ -1458,10 +1458,16 @@ SHOW CARD. SINGLE ANSWER POSSIBLE</p>
 var max_limit = 3; // Max Limit
 var Q11_limit=2;
 //    var inter=[];
+$(document).load(function(){  
+    for(var i=0;i<41;i++){
+    $("#Q27_1_"+i).hide();
+    $("#Q27_2_"+i).hide();
+    }    
+    console.log(hello);
+});
 $(document).ready(function (){
     
-    
-
+  
     $(".check2:input:checkbox").each(function (index){
         this.checked = (".check2:input:checkbox" < Q11_limit);
         //console.log(index);
@@ -1475,6 +1481,11 @@ $(document).ready(function (){
         }
     });
 });
+//$('.check:input:checkbox').click( function() {
+//    var selectedIndex = $('.check:input:checkbox').index( $(this) );
+    //console.log(selectedIndex);
+    //... now do something with it...
+//});
 $(".check").each(function (index){
         this.checked = (".check:input:checkbox" < max_limit);
          
@@ -1482,17 +1493,32 @@ $(".check").each(function (index){
         //inter[index]=1;
     //  console.log(inter);
         //}
-    var ind=$(".check:input:checkbox:checked").index ;
-   if ({
-       alert("Checkbox at index " + index + " is checked.");
-    }
+    
+    for(var i=0;i<41;i++){
+    $("#Q27_1_"+i).hide();
+    $("#Q27_2_"+i).hide();
+    }    
+    //console.log(hello);
+    
     }).change(function (){
         //console.log();
         if ($(".check:input:checkbox:checked").length > max_limit){
             this.checked = false;
         }
 });
-    
+$('.check:input:checkbox').click( function() {
+    var selectedIndex = $('.check:input:checkbox').index( $(this) );
+    console.log(selectedIndex);
+    var len = $('.check:input:checkbox:checked').length;
+    selectedIndex+=1;
+    console.log(len);
+    if(len<=3){
+    $("#Q27_1_"+selectedIndex).show();
+    $("#Q27_2_"+selectedIndex).show();
+        }
+    console.log(selectedIndex);
+    //... now do something with it...
+});    
     
     </script>    
 </html>
