@@ -1,6 +1,1 @@
-Thanks for downloading this theme!
-
-Theme Name: Regna
-Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-Author: BootstrapMade.com
-Author URL: https://bootstrapmade.com
+This is a survey based tool built around an elaborate questionaire whitin a fortnight. This was esentially a prototype and couldn't complete due to my academic commitements.
